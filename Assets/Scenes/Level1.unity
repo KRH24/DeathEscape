@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &81160071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,6 +1162,7 @@ GameObject:
   - component: {fileID: 2108331155}
   - component: {fileID: 2108331154}
   - component: {fileID: 2108331159}
+  - component: {fileID: 2108331160}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1304,6 +1305,20 @@ MonoBehaviour:
   moveLeftKey: 97
   moveRightKey: 100
   playerCamera: {fileID: 963194227}
+--- !u!114 &2108331160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108331153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6773942beb194034c87a1b63b4c32826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  player: {fileID: 2108331158}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
