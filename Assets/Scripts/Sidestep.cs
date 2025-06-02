@@ -17,7 +17,7 @@ public class Sidestep : MonoBehaviour
     void Update()
     {
 	    if(Input.GetKeyDown(KeyCode.A)){
-	    	
+	    
 	    	hasPressed = true;
 	    	//count += 1;
 	    	
@@ -25,18 +25,44 @@ public class Sidestep : MonoBehaviour
 	    	
 	    	if(CurrentTime - lastLapTime <= threshold){
 	    	
-		    rb.AddForce( 50f, 0 , 0, ForceMode.Impulse);
+		    	Vector3 sidestep = Player.right * -50f;
+		    	rb.AddForce( sidestep, ForceMode.Impulse);
 		    lastLapTime = 0f;
 		    
 		    }
 		    else{
 		    	
-			    lastLapTime = 0f;
+			    lastLapTime = CurrentTime;
 		    	
 		    }
+		    
+	    }
+		    if(Input.GetKeyDown(KeyCode.D)){
+	    	
+			    hasPressed = true;
+			    //count += 1;
+	    	
+			    float CurrentTime = Time.time;
+	    	
+			    if(CurrentTime - lastLapTime <= threshold){
+	    	
+				    Vector3 sidestep = Player.right * 50f;
+				    rb.AddForce( sidestep, ForceMode.Impulse);
+				    lastLapTime = 0f;
+		    
+			    }
+			    else{
+		    	
+				    lastLapTime = CurrentTime;
+		    	
+			    }
 		       
 		    	
 	    	
-	    }
+		    }
+	    
+	    
+    
     }
+
 }
